@@ -48,9 +48,11 @@ These show the editor in action: the four-part finding shape (`rules.md` §1), w
 
 ## Example 2 — a strong ad with real gaps (fairness + nuance)
 
+> The abbreviated *teaching* version of a real ad. The full, reproducible run on the same campaign — verbatim `check.py` output and a deeper set of findings — is in [`receipts/atomic-lincoln-250/`](receipts/atomic-lincoln-250/critique.md).
+
 ### The ad plan (abbreviated)
 
-> A brand/story ad for a 250th-of-July promotion: a period character rides into town to laser off a tattoo of an old flame's name ("Ann"). 9:16, ~22 s, music only. Beats 1–4 set up the ride and the "Ann" reveal; beat 5 is the laser on "Ann" (**AI-generated**); beat 6 the clear arm; beat 7 an end-card with the offer ($250 off an 8-session package) + logo. No on-screen text until the end-card. Offer also in the Meta copy. CTA: Book Now.
+> A brand/story ad for a 250th-of-July promotion: a period character rides into town to laser off a tattoo of an old flame's name ("Ann"). 9:16, ~23 s, music only. Beats 1–4 set up the ride and the "Ann" reveal; beat 5 is the laser on "Ann" (**AI-generated**); beat 6 the clear arm; beat 7 an end-card with the offer ($250 off an 8-session package) + logo. No on-screen text until the end-card. Offer also in the Meta copy. CTA: Book Now.
 
 ### The critique
 

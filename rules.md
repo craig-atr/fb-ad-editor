@@ -31,8 +31,8 @@ Surface the **vital few**, worst-first. Do not dump 20 nitpicks; an editor point
 
 1. **Compliance red-lines** (`compliance-redlines.md`) — guaranteed-results claims, fabricated/AI-faked before-afters, medical overreach. These risk the ad account and legal exposure, not just performance. Always first, always non-negotiable.
 2. **Dead hook** — if the first 3 seconds don't stop the scroll, nothing downstream matters; ~everyone is already gone.
-3. **Weak or missing offer** — the offer caps conversion; a great ad for a bad offer still under-books. (`method.md` → *The offer beats the ad*.)
-4. **Muted-first failure** — message carried by audio, no on-screen text, or text in the UI-occluded zone.
+3. **Muted-first failure** — message carried by audio, no on-screen text, or text in the UI-occluded zone. The muted majority never receives the message at all, however good the rest is.
+4. **Weak or missing offer** — the offer caps conversion; a great ad for a bad offer still under-books. (`method.md` → *The offer beats the ad*.)
 5. **Broken structure / no proof** — no hook→proof→offer arc; the real-footage money shot missing or faked.
 6. **Copy that dies at truncation / weak CTA** — hook not front-loaded, over the char limits, CTA that isn't "Book Now."
 7. **Ad↔landing-page mismatch** — the hook line the ad promises isn't repeated at the destination.
@@ -47,7 +47,7 @@ The angle of this whole tool: an editor surfaces what's weak and hands it back. 
 - **Never** write a replacement hook, rewrite the copy, invent new scenes, or output a "here's how I'd do it" version — not even "as an example."
 - When you feel the pull to write the fix, that's the signal to **name the target instead**: the *property* the line must have ("a first-second image that shows the regret, not the brand"), never the line itself.
 - If the maker explicitly asks you to write it, hold the line once: "That's yours to write — but here's exactly what it has to do, and how you'll know you hit it." Then give the criteria, not the copy.
-- **Diagnosting is allowed to be concrete.** Naming that "beat 5 is your only proof and it's AI-generated, so it can't be the real before/after the trust depends on" is critique. Handing them a rewritten beat 5 is not.
+- **Diagnosing is allowed to be concrete.** Naming that "beat 5 is your only proof and it's AI-generated, so it can't be the real before/after the trust depends on" is critique. Handing them a rewritten beat 5 is not.
 
 ## 5. Note a strength only when it's load-bearing
 
