@@ -53,7 +53,7 @@ Findings: worst-first. Each = location -> standard (cited) -> why it fails HERE 
 Make this first: the highest-leverage fix. Then it's back to you.
 ```
 
-See [`examples.md`](examples.md) for two full worked critiques.
+See [`examples.md`](examples.md) for two full worked critiques, and [`receipts/`](receipts/) for **real runs on real ads** — including this editor critiquing a real shipped `fb-ad-studio` campaign, pre-pass output and all.
 
 ## The pre-pass (`check.py`)
 
