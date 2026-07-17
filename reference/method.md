@@ -6,11 +6,11 @@ This file says what *good* looks like. It is a yardstick, not a script to hand t
 
 ## Core beliefs (each one is a standard; violating it is a finding)
 
-- **The offer beats the ad.** The offer/angle is the biggest lever. For local service, frame as **Gift + Confidence + Fresh Start**, not "discount." A strong ad on a weak offer still under-books.
+- **The offer beats the ad.** The offer/angle is the biggest lever. Frame around the customer's core motivation — the **active profile** names it for your industry — not around a generic discount. A strong ad on a weak offer still under-books.
 - **The hook is the ad.** The first 3 seconds decide whether anyone watches. It must lead with the most arresting, emotionally relatable image or line — a pattern-interrupt, not a warm-up or a logo.
 - **Muted-first.** Most people watch with sound off. Big on-screen text carries the message; audio is a bonus, never the plan. An ad whose message only exists in the voiceover fails muted.
 - **Authentic beats polished.** Real treatment room, real client examples, real sound outperform overproduced stock-style content. "Authentic professional" wins; "commercial" loses.
-- **Real footage sells; AI supports.** The winning combo is **AI hook + real proof + real results + strong CTA.** AI is for hooks, emotional beats, lifestyle, brand frames. The money shot — the laser in action, the real before/after — is *real footage*. Faking proof with AI is both a performance miss and a compliance red-line.
+- **Real footage sells; AI supports.** The winning combo is **AI hook + real proof + real results + strong CTA.** AI is for hooks, emotional beats, lifestyle, brand frames. The money shot — *your profile's real proof* (the treatment in action, the real before/after, the real sold result) — is *real footage*. Faking proof with AI is both a performance miss and a compliance red-line.
 - **Fast cuts.** Movement or a cut every 2–3 seconds. A static or slow scene is a scroll-past.
 - **Test hooks, not ads.** Ship 3 versions, same offer, different hooks; let the platform pick. One-hook ads leave the winner undiscovered.
 
@@ -26,13 +26,12 @@ An ad plan should map to this arc. If it doesn't, name where it breaks.
 
 Typical: 5–6 scenes, 2–5 s each. Total ~15–20 s (a story/brand piece can stretch to ~22 s if the hook holds).
 
-## Offer framing menu (strongest → weakest for a newer studio)
+## Offer framing
 
-1. **Free consultation + small bonus** ("Free Consultation + $50 Off First Package") — low friction, best for colder traffic and lead-gen.
-2. **Gift-card promo** ("Buy $300, Get $50 Bonus") — feels like a gift, improves cash flow.
-3. **Limited package offer** ("Up to 20% Off Packages") — best for bigger jobs; risks cheapening perceived value, so pair with premium language.
+The strongest offer *type* varies by industry — the **active profile** lists the good-to-weak options for your field (`reference/profiles/<profile>.md` → Offer framing). Two rules hold everywhere:
 
-Add urgency ("limited seasonal availability") *without* heavy discount language — discounting weakens perceived value. If the plan leads with "% off" as the whole angle, that's a finding.
+- **Lead with what the viewer gets**, framed around their motivation — not "call me," not your credentials.
+- **Add urgency without heavy discounting.** Discount-as-the-whole-angle cheapens a premium service and attracts price-shoppers. If the plan leads with "% off" as the whole angle, that's a finding (`failure-modes.md` D1).
 
 ## Copy structure
 
@@ -46,4 +45,4 @@ Add urgency ("limited seasonal availability") *without* heavy discount language 
 
 ## Scene source discipline
 
-Every scene is one of: `AI_CLIP` / `AI_IMAGE` (hooks, emotional beats, lifestyle, brand) or `REAL_FOOTAGE` (the laser in action, real before/after, real room). **Real footage is the trust builder and must not be faked with AI.** If the plan's only proof is AI-generated, the ad has no real proof — a finding under both performance and compliance.
+Every scene is one of: `AI_CLIP` / `AI_IMAGE` (hooks, emotional beats, lifestyle, brand) or `REAL_FOOTAGE` (the real proof your profile defines — the treatment in action, the real before/after, the real listing). **Real footage is the trust builder and must not be faked with AI.** If the plan's only proof is AI-generated, the ad has no real proof — a finding under both performance and compliance.

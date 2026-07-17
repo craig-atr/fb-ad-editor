@@ -1,8 +1,8 @@
-# Second Pass — a video ad editor for local service businesses
+# Second Pass — a video ad editor for laser tattoo removal clinics
 
-**Second Pass** is a folder-based **editor** for Meta (Facebook/Instagram) direct-response **video ads** — the kind local, appointment-based service businesses run to book consultations (laser/med-spas, dental, aesthetics, salons, HVAC, clinics). You hand it an ad concept before you spend a dollar making or running it, and it tells you the few beats that will make it get skipped or waste budget — and hands it back for **you** to fix.
+**Second Pass** is a folder-based **editor** for Meta (Facebook/Instagram) direct-response **video ads**, tuned for **laser tattoo removal / aesthetic clinics**. You hand it an ad concept before you spend a dollar making or running it, and it tells you the few beats that will make it get skipped or waste budget — and hands it back for **you** to fix. The industry-specific rules live in a swappable **profile**, so the same editor retargets to another field (a `real-estate` profile ships as proof).
 
-> **What it reviews & who it's for (submission summary):** Second Pass critiques Meta video-ad concepts for local, appointment-based service businesses on small budgets. It catches the mistakes that make an ad die on the muted scroll — dead hooks, audio-carried messages, discount-led offers, faked proof, guaranteed-results claims that break ad policy — against the direct-response video method. It is an editor, not a rewriter: it points at what's weak, names the standard, and hands it back.
+> **What it reviews & who it's for (submission summary):** Second Pass critiques Meta video-ad concepts for laser tattoo removal clinics. It catches the mistakes that make an ad die on the muted scroll — dead hooks, audio-carried messages, discount-led offers, AI-faked proof, guaranteed-results claims that break medical-ad policy — against the direct-response video method. It's an editor, not a rewriter: it points at what's weak, names the standard, and hands it back. Its domain rules are a swappable profile, so it also ships working on real estate (Fair Housing) as a worked example.
 
 ## The one rule: it critiques, it does not create
 
@@ -19,7 +19,11 @@ reference/
   method.md               the direct-response video standard it critiques against (the yardstick)
   failure-modes.md        the catalog of junior mistakes, worst-first
   meta-placement-specs.md the checkable limits (aspect, safe zones, copy limits, length)
-  compliance-redlines.md  the non-negotiables (no guaranteed results, real proof only)
+  compliance-redlines.md  how the compliance layer works (the specifics live in the active profile)
+  profiles/               the swappable DOMAIN layer — the only industry-specific files
+    tattoo-removal.md     default: medical/aesthetic compliance, offer framing, real proof
+    real-estate.md        a second industry (Fair Housing) — proof the layer swaps
+    _TEMPLATE.md          copy this to add your own industry
 README.md      you are here
 ```
 
@@ -28,7 +32,8 @@ README.md      you are here
 1. **Drop this folder into a Claude project** (or load `identity.md` + `rules.md` + `reference/` into a chat). Claude becomes the editor.
 2. **Run the pre-pass** on your ad plan first — it catches the mechanical stuff so the editor spends judgment on the rest:
    ```
-   python check.py my-ad-plan.md      # or:  cat my-ad-plan.md | python check.py
+   python check.py my-ad-plan.md                        # default profile (tattoo-removal)
+   python check.py --profile real-estate my-ad-plan.md  # a different industry
    ```
 3. **Hand it your ad concept** and ask for a critique. Rough is fine.
 4. **Get back** a one-line verdict, then the findings worst-first, then the one fix to make first. Never a rewritten ad.
@@ -57,20 +62,24 @@ See [`examples.md`](examples.md) for two full worked critiques, and [`receipts/`
 
 ## The pre-pass (`check.py`)
 
-A dependency-free script that catches what's objective — banned compliance wording ("guaranteed," "permanently erase," "painless"), copy over Meta's character limits, a missing/wrong CTA, the wrong aspect ratio, over-length, and an AI-faked before/after. It mirrors `reference/compliance-redlines.md` and `reference/meta-placement-specs.md`. Prove it works anytime:
+A dependency-free script that catches what's objective — the active profile's banned compliance wording, copy over Meta's character limits, a missing/wrong CTA, the wrong aspect ratio, over-length, and an AI-faked before/after. The compliance list and the preferred CTA load from the **active profile** (`reference/profiles/`), so the same script critiques a different industry when you pass `--profile`. The universal checks (copy limits, aspect, length) don't change. Prove it works anytime:
 
 ```
 python check.py --selftest
 ```
 
+The self-test loads both shipped profiles and proves each catches its own domain — including that a realtor's "Learn More" CTA is fine under `real-estate` but flagged under `tattoo-removal`, and that Fair Housing wording is caught under `real-estate` but not `tattoo-removal`. The swap is real, not cosmetic.
+
 Compliance hits are **errors** (the ad can't run until they're fixed); the rest are **warnings**. The editor then critiques the things code can't see — the dead hook, the weak offer, the missing proof. *Code catches the wording; the editor catches the meaning.*
 
-## Make it yours (for another local service business)
+## Make it yours (retarget to another industry)
 
-Second Pass ships tuned for laser/aesthetics, but the method is general to local appointment-based service ads. To retarget it:
+Second Pass ships tuned for laser tattoo removal, but the **spine** — the critique method (`rules.md`), the DR-video standard (`method.md`), the Meta specs — is the same for any local direct-response video ad. **You don't touch the spine.** You write one **profile**:
 
-1. Adjust `reference/method.md` (offer framing, audience) and `reference/compliance-redlines.md` (your industry's ad rules — every regulated service has them) for your business.
-2. Swap the examples in `examples.md` for weak/strong plans from your own field.
-3. Keep `rules.md` as-is — the critique discipline is the same everywhere.
+1. Copy `reference/profiles/_TEMPLATE.md` to `reference/profiles/<your-industry>.md` and fill in your compliance red-lines (the machine-readable list `check.py` reads), your offer framing, and what counts as real proof.
+2. Name it the active profile in `identity.md`, and run `check.py --profile <your-industry>`.
+3. Optionally swap `examples.md` for weak/strong plans from your field.
+
+The shipped `real-estate.md` is a full worked example — a completely different compliance regime (Fair Housing instead of medical claims), the same editor, no spine changes. See it run in [`receipts/`](receipts/).
 
 The whole point: an editor that catches the mistakes a junior ad-maker makes in *your* domain, so you catch them on paper instead of paying for them in the feed.

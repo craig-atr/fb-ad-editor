@@ -4,12 +4,14 @@ The catalog the editor scans an ad plan against. Each entry: the **mistake**, th
 
 Ordered by cost (matches the triage order in `rules.md` §3). Cite these by name in findings.
 
+> The *modes* are general to any local direct-response video ad. The domain-specific illustrations below use the default `tattoo-removal` profile; the **active profile** (`reference/profiles/`) supplies your industry's compliance red-lines and offer specifics.
+
 ---
 
-## A. Compliance red-lines (always first — see `compliance-redlines.md`)
-- **A1. Guaranteed results.** "Guaranteed removal," "erases completely," "100% gone," "permanent," "painless." → Medical/aesthetic ads can't promise outcomes. Risks the ad account and legal exposure. Target: capability language ("can help fade," "most clients see…"), never a guarantee.
-- **A2. Faked proof.** AI-generated "before/after," stock skin passed as a real client. → The proof is the trust; faking it is deceptive and a policy violation. Target: the before/after and treatment shots are *real footage*.
-- **A3. Medical overreach.** Diagnosing, promising safety for every skin type, ignoring realistic expectations. → Scope + liability. Target: honest, non-diagnostic framing.
+## A. Compliance red-lines (always first — from the active profile; see `compliance-redlines.md`)
+- **A1. Forbidden claims.** Whatever your industry's regulator bans. *Tattoo removal:* guaranteed results ("removal guaranteed," "painless," "erases completely"). *Real estate:* Fair Housing steering ("perfect for families," "safe neighborhood"). → Risks the ad account and legal exposure. Target: the profile's compliant framing.
+- **A2. Faked proof.** AI-generated or stock passed off as a real result. → The proof is the trust; faking it is deceptive and a policy violation. Target: the proof is *real footage* (what your profile defines as real proof).
+- **A3. Overreach / missing disclosure.** Claiming more than you can (medical safety, unverifiable results) or omitting a required disclosure (license, Equal Housing, brokerage). → Scope + liability. Target: honest framing plus the disclosures your profile requires.
 
 ## B. The hook (0:00–0:03) — if this fails, nothing else matters
 - **B1. Logo/intro open.** First seconds spent on the brand mark or a slow establishing shot. → On a muted scroll there's no pattern-interrupt and no reason to stop. Target: an arresting image or the viewer's problem, on screen, in second one.
@@ -24,11 +26,11 @@ Ordered by cost (matches the triage order in `rules.md` §3). Cite these by name
 ## D. Offer
 - **D1. Discount-led.** "20% OFF!!" as the whole angle. → Cheapens a premium service, attracts price-shoppers. Target: Gift + Confidence + Fresh Start, urgency without heavy discounting.
 - **D2. No offer / no reason now.** "Book a consultation" with nothing behind it. → No incentive to act today. Target: a concrete offer + a real urgency line.
-- **D3. Vague offer.** "Great deals on removal." → Nothing specific to want. Target: a named, specific offer.
+- **D3. Vague offer.** "Great deals" with nothing concrete. → Nothing specific to want. Target: a named, specific offer.
 
 ## E. Structure & proof
 - **E1. No hook→proof→offer arc.** Beats don't build; offer buried or offer-only. → The ad doesn't earn the click. Target: the three-act shape in `method.md`.
-- **E2. No real proof.** No laser-in-action or real before/after — or it's faked (see A2). → Nothing builds trust in a trust-first purchase. Target: real footage is the money shot.
+- **E2. No real proof.** No real footage of the thing that builds trust (the treatment, the before/after, the real result) — or it's faked (see A2). → Nothing builds trust in a trust-first purchase. Target: real footage is the money shot.
 - **E3. Static / no cadence.** Long holds, no cut or motion every 2–3s. → Reads as a slideshow; scroll-past. Target: something changes every 2–3 seconds.
 - **E4. Polished-over-authentic.** Stock-commercial look. → Doesn't read as native, underperforms real. Target: authentic-professional.
 

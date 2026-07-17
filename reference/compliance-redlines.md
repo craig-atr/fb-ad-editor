@@ -1,39 +1,41 @@
-# Compliance Red-Lines — the non-negotiables
+# The Compliance Layer — how it works
 
-Aesthetic/medical advertising has hard limits. A violation here is always the **first** finding — it risks the ad account and legal exposure, not just performance. These are the patterns the `check.py` pre-pass flags mechanically; this file is the source of truth and the reasoning.
+Compliance is **domain-specific**, so the actual red-lines live in the **active industry
+profile** (`reference/profiles/<profile>.md`), not here. This file explains the *layer* —
+the part that's the same for every industry. The specifics change per profile; the
+discipline below does not.
 
-The editor flags these; it does not "fix" them — the maker rewrites the claim.
+## The rule that never changes
 
-## 1. No guaranteed outcomes
+A compliance violation is **always the first finding** (`rules.md` §3). It risks the ad
+account and legal exposure, not just performance — so it outranks even a dead hook. The
+editor flags it and hands it back; it never "fixes" the claim.
 
-Laser results vary by ink, skin, and immune response. Never promise the outcome. Flag any of:
+## Where the specifics live
 
-- **guarantee / guaranteed**, "results guaranteed"
-- **permanent / permanently**, "gone forever," "gone for good"
-- **completely / fully / 100%** removed / erased / gone
-- **erase / erases** (as a promise), "removes all the ink"
-- **painless / pain-free / no pain**
-- **no risk / risk-free / zero risk / no side effects**
-- "works on **any** skin type / **everyone** / **all** tattoos" (safety + efficacy overreach)
+Each profile carries two things the editor and `check.py` use:
 
-**Target (hand back, don't write it for them):** capability + honesty — "can help fade," "most clients see significant fading over a series," "results vary." Set realistic expectations instead of promising.
+- A **Compliance red-lines** section (prose) — what claims can get you fined, sued, or your
+  ad account pulled in that industry, and the compliant framing to aim for.
+- A **Red-line phrases** list (machine-readable) — the wording `check.py` flags mechanically.
 
-## 2. Proof must be real
+Two shipped profiles show how different these regimes are:
 
-- Before/after images and treatment footage must be **actual outcomes** from real clients (with permission).
-- **Never** AI-generate fake before/after or fake clinical results, and never present stock as a real client. This is the trust of the whole ad; faking it is deceptive and violates platform policy.
-- If the plan's only "proof" beat is `AI_CLIP` / `AI_IMAGE`, the ad has **no real proof** — flag it.
+| Profile | The dominant compliance regime | Example red-line |
+|---------|--------------------------------|------------------|
+| `tattoo-removal` (default) | Medical/aesthetic advertising — no guaranteed outcomes | "guaranteed removal," "painless," "erases completely" |
+| `real-estate` | **Fair Housing** — no steering by protected class | "perfect for families," "safe neighborhood," "exclusive community" |
 
-## 3. No medical overreach
+Same editor, same critique method, same `check.py` — the compliance layer swaps with the profile.
 
-- No diagnosing a viewer's skin or tattoo from an ad.
-- No claims of medical safety/approval that aren't true. "FDA-cleared/approved" language must be **verified true for the specific device** before it runs — flag it for the maker to confirm, don't assume.
-- Keep to non-diagnostic, consultation-first framing ("a free consultation to see if you're a candidate").
+## What code catches vs. what the editor catches
 
-## 4. Honesty of the ad↔offer↔destination chain
+`check.py` scans for the profile's red-line *wording*. It cannot judge meaning — whether a
+before/after is genuinely real, whether an "FDA-cleared" claim is true, whether a phrase is
+steering *in context*, or whether a required disclosure is actually present. Those stay
+human-verified findings.
 
-- The offer stated in the ad must be real and available, and the landing page must honor it. A bait offer that the destination doesn't back is both a conversion killer and a trust/compliance problem.
+**Code catches the wording; the editor catches the meaning.**
 
----
-
-**Note for the pre-pass:** `check.py` scans the ad plan's text for the phrases in §1 and for a proof beat that's only AI. It cannot judge whether a before/after is genuinely real or whether an "FDA-cleared" claim is true — those stay human-verified findings. Code catches the wording; the editor catches the meaning.
+> Retargeting to a new industry? You don't touch this file or the rest of the spine — you
+> write a new profile. See `reference/profiles/_TEMPLATE.md`.
