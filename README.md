@@ -61,6 +61,8 @@ Make this first: the highest-leverage fix. Then it's back to you.
 
 See [`examples.md`](examples.md) for two full worked critiques, and [`receipts/`](receipts/) for **real runs on real ads** — including this editor critiquing a real shipped `fb-ad-studio` campaign, pre-pass output and all.
 
+📄 **In a hurry?** [`real-catches.pdf`](real-catches.pdf) is a 2-page rundown of the four most striking findings from real ad scripts.
+
 ## The pre-pass (`check.py`)
 
 A dependency-free script that catches what's objective — the active profile's banned compliance wording, copy over Meta's character limits, a missing/wrong CTA, the wrong aspect ratio, over-length, and an AI-faked before/after. The compliance list and the preferred CTA load from the **active profile** (`reference/profiles/`), so the same script critiques a different industry when you pass `--profile`. The universal checks (copy limits, aspect, length) don't change. Prove it works anytime:
