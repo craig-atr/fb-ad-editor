@@ -24,6 +24,7 @@ reference/
     tattoo-removal.md     default: medical/aesthetic compliance, offer framing, real proof
     real-estate.md        a second industry (Fair Housing) — proof the layer swaps
     _TEMPLATE.md          copy this to add your own industry
+CREDITS.md     ideas borrowed from other Comp #8 builds, and where each one is used
 README.md      you are here
 ```
 

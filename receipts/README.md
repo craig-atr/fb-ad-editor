@@ -9,6 +9,8 @@ The point of a receipt is that it's inspectable: the input is here, the pre-pass
 reproducible (`python check.py <folder>/ad-plan.md`), and the critique finds real
 problems in real work — including in a *strong* ad — without rewriting a line.
 
+*Shipping the run itself as inspectable evidence is [Mira Bradshaw's idea](https://github.com/mirabradshaw-data/chalky-prd) from Comp #8 — see [`CREDITS.md`](../CREDITS.md).*
+
 | Run | Ad | Result |
 |-----|----|--------|
 | [`atomic-lincoln-250/`](atomic-lincoln-250/critique.md) | A real `fb-ad-studio` brand/story ad (America's 250th) | Pre-pass clean on compliance; 3 mechanical warnings; critique surfaces a real muted-first gap and AI-only proof, keeps the load-bearing hook, rewrites nothing |

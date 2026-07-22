@@ -12,6 +12,10 @@ the active industry profile in reference/profiles/. The universal checks (copy
 limits, aspect, length) are the same for every industry. Swap the profile, and the
 same script critiques a different domain.
 
+This layer exists because of two Comp #8 builds: Jodi Paige-Lee's "a must in markdown
+is a request, a must in code is a constraint," and Gabriel Azoulay's blocking,
+self-tested gate. See CREDITS.md.
+
 Usage:
     python check.py adplan.md                       # default profile (tattoo-removal)
     python check.py --profile real-estate adplan.md # swap the domain rules
