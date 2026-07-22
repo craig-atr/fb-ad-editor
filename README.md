@@ -73,6 +73,30 @@ The self-test loads both shipped profiles and proves each catches its own domain
 
 Compliance hits are **errors** (the ad can't run until they're fixed); the rest are **warnings**. The editor then critiques the things code can't see — the dead hook, the weak offer, the missing proof. *Code catches the wording; the editor catches the meaning.*
 
+## How this uses ICM (Interpretable Context Methodology)
+
+The folder *is* the program. There's no orchestration code to reverse-engineer — what you read is what runs, and each file does exactly one job.
+
+**The context layers.** Every file here sits in exactly one layer, which is what keeps the reusable parts reusable:
+
+| Layer | Here |
+|---|---|
+| **0 — identity** | `identity.md` — who the editor is, what it reviews, the critique-not-rewrite contract, the active profile |
+| **2 — the contract** | the output contract (verdict → findings → make-this-first) and `rules.md`'s four-part finding shape |
+| **3 — reference ("the factory")** | `rules.md`, `examples.md`, `reference/method.md`, `failure-modes.md`, `meta-placement-specs.md` — stable across every run, internalized as constraints |
+| **3 — the domain layer** | `reference/profiles/` — the *only* industry-specific files. Swap one file, retarget the editor |
+| **4 — working ("the product")** | your ad plan in, the critique out — unique per run, and captured in [`receipts/`](receipts/) |
+
+**Deterministic work in code, judgment in the model.** This is the split ICM cares most about. [`check.py`](check.py) does what code can *prove* — character counts, banned wording, aspect ratio, preferred CTA — and the model does what genuinely needs judgment: is the hook dead, is the offer weak, is the proof real. Neither does the other's job. *Code catches the wording; the editor catches the meaning.*
+
+**Configure the factory, not the product.** The reference layer and the profile are set up once; every run produces a new critique from the same configuration. Nothing is hand-tuned per ad. The profile refactor was exactly this principle applied — the domain rules had leaked into files that claimed to be general, which broke reuse until they were pulled into their own layer.
+
+**One canonical source.** The red-line phrases live in the profile and nowhere else — `check.py` *reads* them rather than keeping a copy, so the two can't drift apart.
+
+**The human keeps the judgment that pays.** The editor deliberately stops one step before the artifact: it diagnoses, and the writing — the scarce judgment — stays with the maker. That's not a limitation of the tool; it's the design.
+
+> A fuller write-up of the methodology, plus a procedure for auditing any ICM project against it, lives in [`ICM.md`](https://github.com/craig-atr/voice-engine/blob/main/ICM.md) in my Voice Engine repo.
+
 ## Make it yours (retarget to another industry)
 
 Second Pass ships tuned for laser tattoo removal, but the **spine** — the critique method (`rules.md`), the DR-video standard (`method.md`), the Meta specs — is the same for any local direct-response video ad. **You don't touch the spine.** You write one **profile**:
